@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from'react-router-dom'
 
 export const Card = ({user}) => {
-    console.log("user.login",user)
     return (
         <div className='card'>
             <div className="card-body">

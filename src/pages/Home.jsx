@@ -6,21 +6,20 @@ import {Loader} from '../components/Loader'
 
 export const Home = () => {
     const {loading, users} = useContext(GithubContext)
-    console.log(users)
     return (
         <Fragment>
             <Search />
             <div className="row">
                 {
                     loading
-                        ? <Loader />
-                        : users.map(user => (
-                                <div className="col-sm-4 mb-4" key={user.id}>
-                                    <Card
-                                        user = {user}
-                                    />
-                                </div>
-                            )
+                    ? <Loader />
+                    : users.map(user => (
+                            <div className="col-sm-4 mb-4" key={user.id}>
+                                <Card
+                                    user = {user}
+                                />
+                            </div>
+                        )
                 )}
             </div>
         </Fragment>
